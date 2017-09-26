@@ -1,5 +1,7 @@
-package com.dengqin.utils.base;
+package com.dengqin.utils.net;
 
+import com.dengqin.utils.base.IOUtil;
+import com.dengqin.utils.base.StringUtil;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.HttpStatus;
