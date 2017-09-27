@@ -3,7 +3,9 @@ package com.dengqin.utils.base;
 import java.math.BigDecimal;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Random;
 
 /**
@@ -167,5 +169,20 @@ public class StringUtil {
 			return null;
 		}
 		return fileName.substring(index);
+	}
+
+	/**
+	 * 将字符串按逗号分割、去空格，并放入到ArrayList里面
+	 * 
+	 * @param str
+	 * @return
+	 */
+	public static List<String> convertToList(String str) {
+		String[] s = StringUtil.trim(str).split(",");
+		List<String> list = new ArrayList<String>();
+		for (String st : s) {
+			list.add(StringUtil.trim(st));
+		}
+		return list;
 	}
 }
